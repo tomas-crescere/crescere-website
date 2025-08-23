@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --luxury-black: #060D0D;
+    --premium-white: #F5F4EB;
+    --emerald-green: #146321;
+    --emerald-green-light: #1A7A2A;
+    --emerald-green-dark: #0F4A18;
+    --luxury-gray: #1A1A1A;
+    --premium-gray: #2A2A2A;
+    --accent-gold: #D4AF37;
+  }
+
+  * {
+    @apply border-gray-200;
+  }
+
+  body {
+    @apply bg-premium-white text-luxury-black;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-luxury-gray;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-emerald-green rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-emerald-green-light;
+  }
+
+  /* Selection styles */
+  ::selection {
+    @apply bg-emerald-green text-premium-white;
+  }
+
+  ::-moz-selection {
+    @apply bg-emerald-green text-premium-white;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-emerald-green hover:bg-emerald-green-light text-premium-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 ease-premium transform hover:scale-105 hover:shadow-2xl hover:shadow-emerald-green/25 focus:outline-none focus:ring-2 focus:ring-emerald-green focus:ring-offset-2 focus:ring-offset-premium-white;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border-2 border-emerald-green text-emerald-green hover:bg-emerald-green hover:text-premium-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 ease-premium transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-emerald-green focus:ring-offset-2 focus:ring-offset-premium-white;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent text-luxury-black hover:text-emerald-green font-medium py-3 px-6 transition-all duration-300 ease-premium hover:bg-emerald-green/5;
+  }
+
+  .section-padding {
+    @apply py-24 px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-emerald-green to-emerald-green-light bg-clip-text text-transparent;
+  }
+
+  .glass-effect {
+    @apply bg-premium-white/5 backdrop-blur-md border border-premium-white/10;
+  }
+
+  .card-hover {
+    @apply transition-all duration-500 ease-premium hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-emerald-green/20;
+  }
+
+  .input-field {
+    @apply w-full bg-premium-white border border-gray-200 text-luxury-black placeholder-gray-400 px-6 py-4 rounded-lg transition-all duration-300 ease-premium focus:outline-none focus:border-emerald-green focus:ring-2 focus:ring-emerald-green/20;
+  }
+
+  .section-title {
+    @apply font-display font-bold text-h1 md:text-display text-center mb-8;
+  }
+
+  .section-subtitle {
+    @apply font-body text-body text-luxury-black/70 text-center max-w-3xl mx-auto mb-16;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .scroll-snap-y {
+    scroll-snap-type: y mandatory;
+  }
+
+  .scroll-snap-start {
+    scroll-snap-align: start;
+  }
+
+  .scroll-snap-center {
+    scroll-snap-align: center;
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  .transform-3d {
+    transform-style: preserve-3d;
+  }
+}
+
+/* Custom animations */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Premium loading states */
+.loading-skeleton {
+  @apply bg-gray-200 animate-pulse rounded;
+}
+
+/* Focus visible for accessibility */
+.focus-visible:focus {
+  @apply outline-none ring-2 ring-emerald-green ring-offset-2 ring-offset-premium-white;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

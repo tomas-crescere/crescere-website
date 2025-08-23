@@ -1,0 +1,40 @@
+<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Premium circular background with subtle gradient -->
+  <circle cx="24" cy="24" r="22" fill="url(#backgroundGradient)" />
+  
+  <!-- Elegant letter C with premium styling -->
+  <path
+    d="M30 18C28.5 16.5 26.5 15.5 24 15.5C19.5 15.5 16 19 16 23.5C16 28 19.5 31.5 24 31.5C26.5 31.5 28.5 30.5 30 29"
+    fill="none"
+    stroke="url(#emeraldGradient)"
+    stroke-width="3.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  
+  <!-- Subtle inner accent ring for premium feel -->
+  <circle cx="24" cy="24" r="12" fill="none" stroke="url(#accentGradient)" stroke-width="0.8" opacity="0.2" />
+  
+  <!-- Premium outer ring -->
+  <circle cx="24" cy="24" r="22" fill="none" stroke="url(#borderGradient)" stroke-width="1" opacity="0.3" />
+  
+  <defs>
+    <linearGradient id="backgroundGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060D0D" />
+      <stop offset="50%" stop-color="#0F1A1A" />
+      <stop offset="100%" stop-color="#060D0D" />
+    </linearGradient>
+    <linearGradient id="emeraldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#146321" />
+      <stop offset="100%" stop-color="#1A7A2A" />
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#146321" />
+      <stop offset="100%" stop-color="#D4AF37" />
+    </linearGradient>
+    <linearGradient id="borderGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#146321" />
+      <stop offset="100%" stop-color="#1A7A2A" />
+    </linearGradient>
+  </defs>
+</svg>
