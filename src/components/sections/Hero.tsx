@@ -90,7 +90,7 @@ export const Hero: React.FC = () => {
           className="mb-8"
         >
           <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold text-premium-white mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-premium-white to-premium-white/90 bg-clip-text text-transparent pb-1">Digitálizácia</span>
+            <span className="bg-gradient-to-r from-premium-white to-premium-white/90 bg-clip-text text-transparent pb-1">Digitalizácia</span>
             <br />
             <span className="bg-gradient-to-r from-emerald-green via-emerald-green-light to-emerald-green-dark bg-clip-text text-transparent">vášho podnikania</span>
           </h1>
