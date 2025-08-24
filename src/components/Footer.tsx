@@ -28,7 +28,7 @@ export const Footer: React.FC = () => {
     services: [
       { label: 'Webové stránky', href: '#portfolio' },
       { label: 'Automatizácia', href: '#portfolio' },
-      { label: 'Digitálizácia', href: '#portfolio' },
+              { label: 'Digitalizácia', href: '#portfolio' },
       { label: 'Poradenstvo', href: '#portfolio' }
     ]
   };
